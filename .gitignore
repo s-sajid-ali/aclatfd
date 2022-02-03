@@ -6,6 +6,17 @@ __pycache__/
 # Ipython notebook checkpoints
 .ipynb_checkpoints
 
+# clangd lsp
+clangd/
+compile_commands.json
+
+# Object files
+*.o 
+
+# Binaries
+/benchcomms/benchcomms
+/3D/poisson3d
+
 # Numpy/HDF5 data
 *.npy
 *.npz

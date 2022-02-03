@@ -3,11 +3,9 @@
  * for use in synergia2-devel3 PIC code.
  *
  * This program does the following:
- *  [1] creates a rho vector on all MPI ranks
- *  [2] combines them onto a global vector via sum reduction
- *  [3] scatters them to multi subcomms
- *  [4] solves the Poisson eq. on all subcomms concurrently
- *  [5] scatters phi to all MPI ranks from each subcomm, concurrently.
+ *  [1] creates a rho vector on all MPI ranks & scatters them to multi subcomms
+ *  [2] solves the Poisson eq. on all subcomms concurrently
+ *  [3] scatters phi to all MPI ranks from each subcomm, concurrently.
  *
  *  This assumes that the problem is large enough to benefit
  *  from a multi-GPU solve. If this is not the case, then
@@ -20,16 +18,15 @@
 
 static char help[] = "Prototype space charge 3D solver! \n\n";
 
-#include <petscksp.h>
-#include <petscdmda.h>
-#include <petscviewerhdf5.h>
-
+#include "poisson3d.h"
 
 int main(int argc,char **argv){
 
   PetscErrorCode ierr;                    /* Error code */
 
   ierr = PetscInitialize(&argc,&argv,(char*)0,help);if (ierr) return ierr;
+
+  /* Local rho and phi vectors one each MPI rank */
 
 
 
