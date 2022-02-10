@@ -1,11 +1,11 @@
 ALL:
 
-CFLAGS          = -g -O0
+CFLAGS          = -g -O2
 FFLAGS          =
-CPPFLAGS        = -g -O0 -std=c++17 -stdlib=libc++
+CPPFLAGS        = -g -O2 -std=c++17 -stdlib=libc++
 CLEANFILES      =
 BENCHCOMMS      = benchcomms
-BENCHCOMMSOBJ   = benchcomms.o utils.o io.o
+BENCHCOMMSOBJ   = benchcomms.o alias.o utils.o io.o
 
 include ${PETSC_DIR}/lib/petsc/conf/variables
 include ${PETSC_DIR}/lib/petsc/conf/rules

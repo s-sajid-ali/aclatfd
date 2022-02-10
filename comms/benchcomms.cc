@@ -11,6 +11,7 @@
 
 static char help[] = "Benchmark communications space charge 3D solver! \n\n";
 
+#include "alias.hpp"
 #include "utils.hpp"
 #include "io.hpp"
 
@@ -51,17 +52,20 @@ int main(int argc,char **argv){
   /* Local rho and phi vectors on each MPI rank */
   ierr = init_localvecs(lctx, gctx);CHKERRQ(ierr);
 
-  /* create global aliases of local vectors */
-  ierr = init_global_local_aliases(lctx, gctx);CHKERRQ(ierr);
+  /* determine the appropriate function to create vector with array */
+  ierr = determine_veccreatewitharray_func(gctx);CHKERRQ(ierr);
 
   /* rho and phi vectors on each subcomm */
   ierr = init_subcommvecs(sctx, gctx);CHKERRQ(ierr);
+
+  /* create global aliases of local vectors */
+  ierr = init_global_local_aliases(lctx, gctx);CHKERRQ(ierr);
 
   /* create global aliases of subcomm vectors */
   ierr = init_global_subcomm_aliases(sctx, gctx);CHKERRQ(ierr);
 
   /* create subcomm aliases of local vectors */
-  ierr = init_subcomm_local_aliases(lctx, sctx);CHKERRQ(ierr);
+  ierr = init_subcomm_local_aliases(lctx, sctx, gctx);CHKERRQ(ierr);
 
   /* Initialize rho and phi on each rank */
   ierr = VecSet(lctx.seqrho, ((1.0)/(gctx.global_size)));CHKERRQ(ierr);
