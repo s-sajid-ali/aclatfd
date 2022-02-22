@@ -46,7 +46,7 @@ struct GlobalCtx {
   PetscBool      debug = PETSC_FALSE;         /*! enable verbose outputs */
   PetscMPIInt    global_rank;                 /*! global MPI communicator rank */
   PetscMPIInt    global_size;                 /*! global MPI communicator size */
-  PetscLogStage  logstages[4];                /*! stages for logging performance */
+  PetscLogStage  logstages[5];                /*! stages for logging performance */
 
   Vec            phi_global_local;            /*! global alias of the local vector on each MPI rank */
   Vec            rho_global_local;            /*! global alias of the local vector on each MPI rank */

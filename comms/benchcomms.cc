@@ -42,9 +42,12 @@ int main(int argc,char **argv){
 
   /* Register logging stages */
   ierr = PetscLogStageRegister(const_cast<char*>("3ds-background"), &gctx.logstages[0]);CHKERRQ(ierr);
-  ierr = PetscLogStageRegister(const_cast<char*>("3ds g-to-s scat"), &gctx.logstages[1]);CHKERRQ(ierr);
-  ierr = PetscLogStageRegister(const_cast<char*>("3ds pde-solve"), &gctx.logstages[2]);CHKERRQ(ierr);
-  ierr = PetscLogStageRegister(const_cast<char*>("3ds s-to-l scat"), &gctx.logstages[3]);CHKERRQ(ierr);
+  ierr = PetscLogStageRegister(const_cast<char*>("warmup transfers"), &gctx.logstages[1]);CHKERRQ(ierr);
+  ierr = PetscLogStageRegister(const_cast<char*>("3ds g-to-s scat"), &gctx.logstages[2]);CHKERRQ(ierr);
+  ierr = PetscLogStageRegister(const_cast<char*>("3ds pde-solve"), &gctx.logstages[3]);CHKERRQ(ierr);
+  ierr = PetscLogStageRegister(const_cast<char*>("3ds s-to-l scat"), &gctx.logstages[4]);CHKERRQ(ierr);
+
+  ierr = PetscLogStagePush(gctx.logstages[0]);CHKERRQ(ierr);
 
   /* Initialize task subcomms, display task-subcomm details */
   ierr = init_solversubcomms(sctx, gctx);CHKERRQ(ierr);
@@ -67,77 +70,42 @@ int main(int argc,char **argv){
   /* create subcomm aliases of local vectors */
   ierr = init_subcomm_local_aliases(lctx, sctx, gctx);CHKERRQ(ierr);
 
-  /* Initialize rho and phi on each rank */
-  ierr = VecSet(lctx.seqrho, ((1.0)/(gctx.global_size)));CHKERRQ(ierr);
-  ierr = VecSet(lctx.seqphi, 0.0);CHKERRQ(ierr);
-
   /* Initialize global (alias of local) to subcomm scatters */
   ierr = init_global_subcomm_scatters(sctx, gctx);CHKERRQ(ierr);
 
   /* Initialize subcomm (alias of local) to local scatters */
   ierr = init_subcomm_local_scatters(lctx, sctx, gctx);CHKERRQ(ierr);
 
-  /* Save current state of global members to file */
-  filename = "prescatters.h5";
-  ierr = save_state(lctx, sctx, gctx, filename);CHKERRQ(ierr);
-
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-     Setup complete, benchmark begins here
-     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-  ierr = PetscLogStagePush(gctx.logstages[0]);CHKERRQ(ierr);
-
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-     global to subcomm scatters
+     Perform one warmup transfer; this sets up the PETScSF data structures
+     internally that will be re-used in the benchmark
      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   ierr = PetscLogStagePush(gctx.logstages[1]);CHKERRQ(ierr);
-  /* Begin global (alias of local) to subcomm scatters! */
-  for (PetscInt i=0; i<gctx.nsubcomms; i++) {
 
+  /* Initialize rho and phi on each rank to random values for warm up run */
+  ierr = VecSetRandom(lctx.seqrho, NULL);CHKERRQ(ierr);
+  ierr = VecSetRandom(lctx.seqphi, NULL);CHKERRQ(ierr);
+  /* warmup global (alias of local to subcomm) transfers  */
+  for (PetscInt i=0; i<gctx.nsubcomms; i++) {
+    /* Begin global (alias of local) to subcomm scatters! */
     ierr = VecScatterBegin(gctx.scat_glocal_to_subcomms[i],
         gctx.rho_global_local,
         gctx.rho_global_subcomm[i],
         ADD_VALUES,
         SCATTER_FORWARD);CHKERRQ(ierr);
-
-  }
-
-  /* Hopefully there is some unrelated work that can occur here! */
-
-  /* End global (alias of local) to subcomm scatters! */
-  for (PetscInt i=0; i<gctx.nsubcomms; i++) {
-
+    /* End global (alias of local) to subcomm scatters! */
     ierr = VecScatterEnd(gctx.scat_glocal_to_subcomms[i],
         gctx.rho_global_local,
         gctx.rho_global_subcomm[i],
         ADD_VALUES,
         SCATTER_FORWARD);CHKERRQ(ierr);
-
   }
-  ierr = PetscLogStagePop();CHKERRQ(ierr);
-
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-     concurrent operations on each solver subcommunicator
-     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-  ierr = PetscLogStagePush(gctx.logstages[2]);CHKERRQ(ierr);
-  /* The value of all elements in sctx->rho_subcomm should be 1 */
-  ierr = VecScale(sctx.rho_subcomm, ((1.0)/(gctx.nsubcomms)));CHKERRQ(ierr);
-  ierr = VecCopy(sctx.rho_subcomm, sctx.phi_subcomm);CHKERRQ(ierr);
-  /* The value of all elements in sctx->phi_subcomm should be 1/nsubcomms */
-  ierr = PetscLogStagePop();CHKERRQ(ierr);
-
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-     subcomm to local scatters
-     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-  ierr = PetscLogStagePush(gctx.logstages[3]);CHKERRQ(ierr);
   /* Begin subcomm (alias of local) to local scatters! */
   ierr = VecScatterBegin(sctx.scat_subcomm_to_local,
       sctx.phi_subcomm,
       sctx.phi_subcomm_local,
       INSERT_VALUES,
       SCATTER_REVERSE);CHKERRQ(ierr);
-
-  /* Hopefully there is some unrelated work that can occur here! */
-
   /* End subcomm (alias of local) to local scatters! */
   ierr = VecScatterEnd(sctx.scat_subcomm_to_local,
       sctx.phi_subcomm,
@@ -146,13 +114,89 @@ int main(int argc,char **argv){
       SCATTER_REVERSE);CHKERRQ(ierr);
   ierr = PetscLogStagePop();CHKERRQ(ierr);
 
-  ierr = PetscLogStagePop();CHKERRQ(ierr); /* for ending 0th logstage */
+
+  /* Initialize rho and phi on each rank */
+  ierr = VecSet(lctx.seqrho, ((1.0)/(gctx.global_size)));CHKERRQ(ierr);
+  ierr = VecSet(lctx.seqphi, 0.0);CHKERRQ(ierr);
+
+  /* Save current state of global members to file */
+  filename = "prescatters.h5";
+  ierr = save_state(lctx, sctx, gctx, filename);CHKERRQ(ierr);
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+     Warmup complete. Benmchmark begins!
+     This executes the data transfers multiple times using the
+     PETSc setup in the warmup phase.
+     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  for (PetscInt run=0; run<5; run++) {
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+       global to subcomm scatters
+       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* Begin global (alias of local) to subcomm scatters! */
+    ierr = PetscLogStagePush(gctx.logstages[2]);CHKERRQ(ierr);
+    for (PetscInt i=0; i<gctx.nsubcomms; i++) {
+      ierr = VecScatterBegin(gctx.scat_glocal_to_subcomms[i],
+          gctx.rho_global_local,
+          gctx.rho_global_subcomm[i],
+          ADD_VALUES,
+          SCATTER_FORWARD);CHKERRQ(ierr);
+    }
+
+    /* Hopefully there is some unrelated work that can occur here! */
+
+    /* End global (alias of local) to subcomm scatters! */
+    for (PetscInt i=0; i<gctx.nsubcomms; i++) {
+      ierr = VecScatterEnd(gctx.scat_glocal_to_subcomms[i],
+          gctx.rho_global_local,
+          gctx.rho_global_subcomm[i],
+          ADD_VALUES,
+          SCATTER_FORWARD);CHKERRQ(ierr);
+    }
+    ierr = PetscLogStagePop();CHKERRQ(ierr);
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+       concurrent operations on each solver subcommunicator
+       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    ierr = PetscLogStagePush(gctx.logstages[3]);CHKERRQ(ierr);
+    /* The value of all elements in sctx->rho_subcomm should be 1 */
+    ierr = VecScale(sctx.rho_subcomm, ((1.0)/(gctx.nsubcomms)));CHKERRQ(ierr);
+    ierr = VecCopy(sctx.rho_subcomm, sctx.phi_subcomm);CHKERRQ(ierr);
+    /* The value of all elements in sctx->phi_subcomm should be 1/nsubcomms */
+    ierr = PetscLogStagePop();CHKERRQ(ierr);
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+       subcomm to local scatters
+       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    ierr = PetscLogStagePush(gctx.logstages[4]);CHKERRQ(ierr);
+    /* Begin subcomm (alias of local) to local scatters! */
+    ierr = VecScatterBegin(sctx.scat_subcomm_to_local,
+        sctx.phi_subcomm,
+        sctx.phi_subcomm_local,
+        INSERT_VALUES,
+        SCATTER_REVERSE);CHKERRQ(ierr);
+
+    /* Hopefully there is some unrelated work that can occur here! */
+
+    /* End subcomm (alias of local) to local scatters! */
+    ierr = VecScatterEnd(sctx.scat_subcomm_to_local,
+        sctx.phi_subcomm,
+        sctx.phi_subcomm_local,
+        INSERT_VALUES,
+        SCATTER_REVERSE);CHKERRQ(ierr);
+    ierr = PetscLogStagePop();CHKERRQ(ierr);
+  }
+
+  /* Benchmakr complete! */
 
   /* Save current state of global members to file */
   filename = "postscatters.h5";
   ierr = save_state(lctx, sctx, gctx, filename);CHKERRQ(ierr);
 
   ierr = finalize(lctx, sctx, gctx);CHKERRQ(ierr);
+
+  ierr = PetscLogStagePop();CHKERRQ(ierr); /* for the 0th stage */
+
   ierr = PetscFinalize();
   return ierr;
 }
