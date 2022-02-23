@@ -30,7 +30,6 @@ int main(int argc,char **argv){
      Initialize PETSc and MPI, query mpi rank and size
      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   ierr = PetscInitialize(&argc,&argv,(char*)0,help);if (ierr) return ierr;
-  gctx.nsubcomms = 2;
   ierr = PetscOptionsGetInt(NULL, NULL, "-nsubcomms", &gctx.nsubcomms, NULL);CHKERRQ(ierr);
   ierr = MPI_Comm_rank(PETSC_COMM_WORLD, &gctx.global_rank);CHKERRMPI(ierr);
   ierr = MPI_Comm_size(PETSC_COMM_WORLD, &gctx.global_size);CHKERRMPI(ierr);

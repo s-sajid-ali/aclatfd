@@ -39,24 +39,24 @@ PetscSF Object: 8 MPI processes
   [0] 0 <- (6,0)
   [0] 1 <- (6,1)
   [0] 2 <- (6,2)
-  [0] 0 <- (4,0)
-  [0] 1 <- (4,1)
-  [0] 2 <- (4,2)
   [0] 0 <- (7,0)
   [0] 1 <- (7,1)
   [0] 2 <- (7,2)
-  [0] 0 <- (2,0)
-  [0] 1 <- (2,1)
-  [0] 2 <- (2,2)
-  [0] 0 <- (3,0)
-  [0] 1 <- (3,1)
-  [0] 2 <- (3,2)
-  [0] 0 <- (1,0)
-  [0] 1 <- (1,1)
-  [0] 2 <- (1,2)
+  [0] 0 <- (4,0)
+  [0] 1 <- (4,1)
+  [0] 2 <- (4,2)
   [0] 0 <- (5,0)
   [0] 1 <- (5,1)
   [0] 2 <- (5,2)
+  [0] 0 <- (1,0)
+  [0] 1 <- (1,1)
+  [0] 2 <- (1,2)
+  [0] 0 <- (3,0)
+  [0] 1 <- (3,1)
+  [0] 2 <- (3,2)
+  [0] 0 <- (2,0)
+  [0] 1 <- (2,1)
+  [0] 2 <- (2,2)
   [1] Number of roots=12, leaves=24, remote ranks=8
   [1] 0 <- (1,3)
   [1] 1 <- (1,4)
@@ -64,12 +64,15 @@ PetscSF Object: 8 MPI processes
   [1] 0 <- (7,3)
   [1] 1 <- (7,4)
   [1] 2 <- (7,5)
-  [1] 0 <- (4,3)
-  [1] 1 <- (4,4)
-  [1] 2 <- (4,5)
   [1] 0 <- (6,3)
   [1] 1 <- (6,4)
   [1] 2 <- (6,5)
+  [1] 0 <- (4,3)
+  [1] 1 <- (4,4)
+  [1] 2 <- (4,5)
+  [1] 0 <- (5,3)
+  [1] 1 <- (5,4)
+  [1] 2 <- (5,5)
   [1] 0 <- (3,3)
   [1] 1 <- (3,4)
   [1] 2 <- (3,5)
@@ -79,9 +82,6 @@ PetscSF Object: 8 MPI processes
   [1] 0 <- (0,3)
   [1] 1 <- (0,4)
   [1] 2 <- (0,5)
-  [1] 0 <- (5,3)
-  [1] 1 <- (5,4)
-  [1] 2 <- (5,5)
   [2] Number of roots=12, leaves=24, remote ranks=8
   [2] 0 <- (2,6)
   [2] 1 <- (2,7)
@@ -95,43 +95,43 @@ PetscSF Object: 8 MPI processes
   [2] 0 <- (4,6)
   [2] 1 <- (4,7)
   [2] 2 <- (4,8)
-  [2] 0 <- (3,6)
-  [2] 1 <- (3,7)
-  [2] 2 <- (3,8)
-  [2] 0 <- (0,6)
-  [2] 1 <- (0,7)
-  [2] 2 <- (0,8)
-  [2] 0 <- (1,6)
-  [2] 1 <- (1,7)
-  [2] 2 <- (1,8)
   [2] 0 <- (5,6)
   [2] 1 <- (5,7)
   [2] 2 <- (5,8)
+  [2] 0 <- (3,6)
+  [2] 1 <- (3,7)
+  [2] 2 <- (3,8)
+  [2] 0 <- (1,6)
+  [2] 1 <- (1,7)
+  [2] 2 <- (1,8)
+  [2] 0 <- (0,6)
+  [2] 1 <- (0,7)
+  [2] 2 <- (0,8)
   [3] Number of roots=12, leaves=24, remote ranks=8
   [3] 0 <- (3,9)
   [3] 1 <- (3,10)
   [3] 2 <- (3,11)
-  [3] 0 <- (6,9)
-  [3] 1 <- (6,10)
-  [3] 2 <- (6,11)
   [3] 0 <- (7,9)
   [3] 1 <- (7,10)
   [3] 2 <- (7,11)
+  [3] 0 <- (6,9)
+  [3] 1 <- (6,10)
+  [3] 2 <- (6,11)
   [3] 0 <- (4,9)
   [3] 1 <- (4,10)
   [3] 2 <- (4,11)
+  [3] 0 <- (5,9)
+  [3] 1 <- (5,10)
+  [3] 2 <- (5,11)
+  [3] 0 <- (2,9)
+  [3] 1 <- (2,10)
+  [3] 2 <- (2,11)
   [3] 0 <- (1,9)
   [3] 1 <- (1,10)
   [3] 2 <- (1,11)
   [3] 0 <- (0,9)
   [3] 1 <- (0,10)
   [3] 2 <- (0,11)
-  [3] 0 <- (2,9)
-  [3] 1 <- (2,10)
-  [3] 2 <- (2,11)
-  [3] 0 <- (5,9)
-  [3] 1 <- (5,10)
-  [3] 2 <- (5,11)
   [4] Number of roots=12, leaves=0, remote ranks=0
   [5] Number of roots=12, leaves=0, remote ranks=0
   [6] Number of roots=12, leaves=0, remote ranks=0
@@ -148,6 +148,9 @@ PetscSF Object: 8 MPI processes
   [4] 0 <- (4,0)
   [4] 1 <- (4,1)
   [4] 2 <- (4,2)
+  [4] 0 <- (0,0)
+  [4] 1 <- (0,1)
+  [4] 2 <- (0,2)
   [4] 0 <- (3,0)
   [4] 1 <- (3,1)
   [4] 2 <- (3,2)
@@ -157,22 +160,22 @@ PetscSF Object: 8 MPI processes
   [4] 0 <- (2,0)
   [4] 1 <- (2,1)
   [4] 2 <- (2,2)
-  [4] 0 <- (0,0)
-  [4] 1 <- (0,1)
-  [4] 2 <- (0,2)
+  [4] 0 <- (5,0)
+  [4] 1 <- (5,1)
+  [4] 2 <- (5,2)
   [4] 0 <- (6,0)
   [4] 1 <- (6,1)
   [4] 2 <- (6,2)
   [4] 0 <- (7,0)
   [4] 1 <- (7,1)
   [4] 2 <- (7,2)
-  [4] 0 <- (5,0)
-  [4] 1 <- (5,1)
-  [4] 2 <- (5,2)
   [5] Number of roots=12, leaves=24, remote ranks=8
   [5] 0 <- (5,3)
   [5] 1 <- (5,4)
   [5] 2 <- (5,5)
+  [5] 0 <- (0,3)
+  [5] 1 <- (0,4)
+  [5] 2 <- (0,5)
   [5] 0 <- (3,3)
   [5] 1 <- (3,4)
   [5] 2 <- (3,5)
@@ -182,9 +185,6 @@ PetscSF Object: 8 MPI processes
   [5] 0 <- (2,3)
   [5] 1 <- (2,4)
   [5] 2 <- (2,5)
-  [5] 0 <- (0,3)
-  [5] 1 <- (0,4)
-  [5] 2 <- (0,5)
   [5] 0 <- (6,3)
   [5] 1 <- (6,4)
   [5] 2 <- (6,5)
@@ -198,6 +198,9 @@ PetscSF Object: 8 MPI processes
   [6] 0 <- (6,6)
   [6] 1 <- (6,7)
   [6] 2 <- (6,8)
+  [6] 0 <- (0,6)
+  [6] 1 <- (0,7)
+  [6] 2 <- (0,8)
   [6] 0 <- (3,6)
   [6] 1 <- (3,7)
   [6] 2 <- (3,8)
@@ -207,174 +210,186 @@ PetscSF Object: 8 MPI processes
   [6] 0 <- (1,6)
   [6] 1 <- (1,7)
   [6] 2 <- (1,8)
-  [6] 0 <- (0,6)
-  [6] 1 <- (0,7)
-  [6] 2 <- (0,8)
+  [6] 0 <- (5,6)
+  [6] 1 <- (5,7)
+  [6] 2 <- (5,8)
   [6] 0 <- (7,6)
   [6] 1 <- (7,7)
   [6] 2 <- (7,8)
   [6] 0 <- (4,6)
   [6] 1 <- (4,7)
   [6] 2 <- (4,8)
-  [6] 0 <- (5,6)
-  [6] 1 <- (5,7)
-  [6] 2 <- (5,8)
   [7] Number of roots=12, leaves=24, remote ranks=8
   [7] 0 <- (7,9)
   [7] 1 <- (7,10)
   [7] 2 <- (7,11)
+  [7] 0 <- (0,9)
+  [7] 1 <- (0,10)
+  [7] 2 <- (0,11)
   [7] 0 <- (3,9)
   [7] 1 <- (3,10)
   [7] 2 <- (3,11)
   [7] 0 <- (2,9)
   [7] 1 <- (2,10)
   [7] 2 <- (2,11)
-  [7] 0 <- (0,9)
-  [7] 1 <- (0,10)
-  [7] 2 <- (0,11)
   [7] 0 <- (1,9)
   [7] 1 <- (1,10)
   [7] 2 <- (1,11)
-  [7] 0 <- (4,9)
-  [7] 1 <- (4,10)
-  [7] 2 <- (4,11)
-  [7] 0 <- (6,9)
-  [7] 1 <- (6,10)
-  [7] 2 <- (6,11)
   [7] 0 <- (5,9)
   [7] 1 <- (5,10)
   [7] 2 <- (5,11)
+  [7] 0 <- (6,9)
+  [7] 1 <- (6,10)
+  [7] 2 <- (6,11)
+  [7] 0 <- (4,9)
+  [7] 1 <- (4,10)
+  [7] 2 <- (4,11)
   MultiSF sort=rank-order
 
 subcomm-to-local scatter
 PetscSF Object: 4 MPI processes
   type: basic
-  [0] Number of roots=12, leaves=12, remote ranks=4
-  [0] 0 <- (0,0)
-  [0] 1 <- (0,1)
-  [0] 2 <- (0,2)
-  [0] 0 <- (3,0)
-  [0] 1 <- (3,1)
-  [0] 2 <- (3,2)
-  [0] 0 <- (2,0)
-  [0] 1 <- (2,1)
-  [0] 2 <- (2,2)
-  [0] 0 <- (1,0)
-  [0] 1 <- (1,1)
-  [0] 2 <- (1,2)
-  [1] Number of roots=12, leaves=12, remote ranks=4
-  [1] 0 <- (1,3)
-  [1] 1 <- (1,4)
-  [1] 2 <- (1,5)
-  [1] 0 <- (3,3)
-  [1] 1 <- (3,4)
 PetscSF Object: 4 MPI processes
   type: basic
   [0] Number of roots=12, leaves=12, remote ranks=4
   [0] 0 <- (0,0)
   [0] 1 <- (0,1)
   [0] 2 <- (0,2)
-  [0] 0 <- (3,0)
-  [0] 1 <- (3,1)
-  [0] 2 <- (3,2)
-  [1] 2 <- (3,5)
-  [1] 0 <- (2,3)
-  [1] 1 <- (2,4)
-  [1] 2 <- (2,5)
-  [1] 0 <- (0,3)
+  [0] 0 <- (1,0)
+  [0] 1 <- (1,1)
+  [0] 2 <- (1,2)
   [0] 0 <- (2,0)
   [0] 1 <- (2,1)
   [0] 2 <- (2,2)
+    [0] Number of roots=12, leaves=12, remote ranks=4
+  [0] 0 <- (0,0)
+  [0] 1 <- (0,1)
+  [0] 2 <- (0,2)
   [0] 0 <- (1,0)
-    [1] 1 <- (0,4)
-  [1] 2 <- (0,5)
-[0] 1 <- (1,1)
+  [0] 1 <- (1,1)
   [0] 2 <- (1,2)
-  [2] Number of roots=12, leaves=12, remote ranks=4
-  [2] 0 <- (2,6)
-  [2] 1 <- (2,7)
+  [0] 0 <- (2,0)
+  [0] 1 <- (2,1)
+  [0] 2 <- (2,2)
+  [0] 0 <- (3,0)
+  [0] 0 <- (3,0)
+  [0] 1 <- (3,1)
+  [0] 2 <- (3,2)
+[0] 1 <- (3,1)
+  [0] 2 <- (3,2)
   [1] Number of roots=12, leaves=12, remote ranks=4
   [1] 0 <- (1,3)
-  [2] 2 <- (2,8)
-  [2] 0 <- (3,6)
-  [2] 1 <- (3,7)
-  [2] 2 <- (3,8)
-  [2] 0 <- (0,6)
-  [2] 1 <- (0,7)
-  [2] 2 <- (0,8)
-  [2] 0 <- (1,6)
-  [2] 1 <- (1,7)
-  [2] 2 <- (1,8)
-  [3] Number of roots=12, leaves=12, remote ranks=4
   [1] 1 <- (1,4)
   [1] 2 <- (1,5)
+  [1] Number of roots=12, leaves=12, remote ranks=4
+  [1] 0 <- (1,3)
+  [1] 1 <- (1,4)
+  [1] 2 <- (1,5)
+  [1] 0 <- (2,3)
+  [1] 1 <- (2,4)
+  [1] 2 <- (2,5)
+  [1] 0 <- (3,3)
+  [1] 1 <- (3,4)
+  [1] 2 <- (3,5)
+  [1] 0 <- (0,3)
+  [1] 1 <- (0,4)
+  [1] 2 <- (0,5)
+  [1] 0 <- (0,3)
+  [1] 1 <- (0,4)
+  [1] 2 <- (0,5)
   [1] 0 <- (3,3)
   [1] 1 <- (3,4)
   [1] 2 <- (3,5)
   [1] 0 <- (2,3)
   [1] 1 <- (2,4)
   [1] 2 <- (2,5)
-  [1] 0 <- (0,3)
-  [1] 1 <- (0,4)
-  [1] 2 <- (0,5)
   [2] Number of roots=12, leaves=12, remote ranks=4
   [2] 0 <- (2,6)
   [2] 1 <- (2,7)
   [2] 2 <- (2,8)
-  [2] 0 <- (3,6)
-  [2] 1 <- (3,7)
-  [2] 2 <- (3,8)
   [2] 0 <- (0,6)
   [2] 1 <- (0,7)
   [2] 2 <- (0,8)
+  [2] 0 <- (3,6)
+  [2] 1 <- (3,7)
+  [2] 2 <- (3,8)
   [2] 0 <- (1,6)
-  [3] 0 <- (3,9)
-  [3] 1 <- (3,10)
-  [3] 2 <- (3,11)
-  [3] 0 <- (0,9)
-  [3] 1 <- (0,10)
-  [3] 2 <- (0,11)
-  [3] 0 <- (2,9)
-  [3] 1 <- (2,10)
-  [3] 2 <- (2,11)
-  [3] 0 <- (1,9)
-  [3] 1 <- (1,10)
-  [3] 2 <- (1,11)
-  MultiSF sort=rank-order
   [2] 1 <- (1,7)
   [2] 2 <- (1,8)
   [3] Number of roots=12, leaves=12, remote ranks=4
   [3] 0 <- (3,9)
   [3] 1 <- (3,10)
   [3] 2 <- (3,11)
-  [3] 0 <- (2,9)
-  [3] 1 <- (2,10)
-  [3] 2 <- (2,11)
   [3] 0 <- (0,9)
   [3] 1 <- (0,10)
   [3] 2 <- (0,11)
   [3] 0 <- (1,9)
   [3] 1 <- (1,10)
   [3] 2 <- (1,11)
+  [3] 0 <- (2,9)
+  [3] 1 <- (2,10)
+  [3] 2 <- (2,11)
   MultiSF sort=rank-order
 
+  [2] Number of roots=12, leaves=12, remote ranks=4
+  [2] 0 <- (2,6)
+  [2] 1 <- (2,7)
+  [2] 2 <- (2,8)
+  [2] 0 <- (1,6)
+  [2] 1 <- (1,7)
+  [2] 2 <- (1,8)
+  [2] 0 <- (3,6)
+  [2] 1 <- (3,7)
+  [2] 2 <- (3,8)
+  [2] 0 <- (0,6)
+  [2] 1 <- (0,7)
+  [2] 2 <- (0,8)
+  [3] Number of roots=12, leaves=12, remote ranks=4
+  [3] 0 <- (3,9)
+  [3] 1 <- (3,10)
+  [3] 2 <- (3,11)
+  [3] 0 <- (1,9)
+  [3] 1 <- (1,10)
+  [3] 2 <- (1,11)
+  [3] 0 <- (2,9)
+  [3] 1 <- (2,10)
+  [3] 2 <- (2,11)
+  [3] 0 <- (0,9)
+  [3] 1 <- (0,10)
+  [3] 2 <- (0,11)
+  MultiSF sort=rank-order
 **************************************** ***********************************************************************************************************************
 ***                                WIDEN YOUR WINDOW TO 160 CHARACTERS.  Use 'enscript -r -fCourier9' to print this document                                 ***
 ****************************************************************************************************************************************************************
 
 ------------------------------------------------------------------ PETSc Performance Summary: -------------------------------------------------------------------
 
-./benchcomms on a  named LAPTOP-CDJT2P3R with 8 processors, by sajid Tue Feb 22 10:50:48 2022
-Using Petsc Development GIT revision: 40fbacb0a57886c386003df0393b06f7c79ee72d  GIT Date: 2022-02-09 16:06:48 +0000
+
+
+      ##########################################################
+      #                                                        #
+      #                       WARNING!!!                       #
+      #                                                        #
+      #   This code was compiled with a debugging option.      #
+      #   To get timing results run ./configure                #
+      #   using --with-debugging=no, the performance will      #
+      #   be generally two or three times faster.              #
+      #                                                        #
+      ##########################################################
+
+
+./benchcomms on a  named LAPTOP-CDJT2P3R with 8 processors, by sajid Wed Feb 23 09:46:15 2022
+Using Petsc Development GIT revision: 8387aa1ef1586e44a80296ce8d7e1d6a748ab1ca  GIT Date: 2022-02-21 23:19:21 -0600
 
                          Max       Max/Min     Avg       Total
-Time (sec):           7.473e-02     1.000   7.472e-02
+Time (sec):           1.322e-01     1.000   1.322e-01
 Objects:              2.600e+01     1.000   2.600e+01
 Flop:                 1.410e+02     1.000   1.410e+02  1.128e+03
-Flop/sec:             1.887e+03     1.000   1.887e+03  1.510e+04
+Flop/sec:             1.066e+03     1.000   1.066e+03  8.530e+03
+Memory:               4.735e+05     1.608   4.510e+05  3.608e+06
 MPI Messages:         3.990e+02     2.418   1.980e+02  1.584e+03
 MPI Message Lengths:  9.652e+05     5.678   1.428e+03  2.262e+06
-MPI Reductions:       5.700e+01     1.000
+MPI Reductions:       1.700e+02     1.000
 
 Flop counting convention: 1 flop = 1 real number operation of type (multiply/divide/add/subtract)
                             e.g., VecAXPY() for real vectors of length N --> 2N flop
@@ -382,12 +397,12 @@ Flop counting convention: 1 flop = 1 real number operation of type (multiply/div
 
 Summary of Stages:   ----- Time ------  ----- Flop ------  --- Messages ---  -- Message Lengths --  -- Reductions --
                         Avg     %Total     Avg     %Total    Count   %Total     Avg         %Total    Count   %Total
- 0:      Main Stage: 2.4896e-04   0.3%  0.0000e+00   0.0%  0.000e+00   0.0%  0.000e+00        0.0%  2.000e+00   3.5%
- 1:  3ds-background: 7.4106e-02  99.2%  0.0000e+00   0.0%  1.104e+03  69.7%  2.038e+03       99.5%  3.700e+01  64.9%
- 2: warmup transfers: 1.1923e-04   0.2%  1.6800e+02  14.9%  8.000e+01   5.1%  2.400e+01        0.1%  0.000e+00   0.0%
- 3: 3ds g-to-s scat: 8.5825e-05   0.1%  8.4000e+02  74.5%  2.800e+02  17.7%  2.400e+01        0.3%  0.000e+00   0.0%
- 4:   3ds pde-solve: 8.4213e-05   0.1%  1.2000e+02  10.6%  0.000e+00   0.0%  0.000e+00        0.0%  0.000e+00   0.0%
- 5: 3ds s-to-l scat: 6.3137e-05   0.1%  0.0000e+00   0.0%  1.200e+02   7.6%  2.400e+01        0.1%  0.000e+00   0.0%
+ 0:      Main Stage: 1.4229e-03   1.1%  0.0000e+00   0.0%  0.000e+00   0.0%  0.000e+00        0.0%  4.000e+00   2.4%
+ 1:  3ds-background: 1.2460e-01  94.2%  0.0000e+00   0.0%  1.104e+03  69.7%  2.038e+03       99.5%  1.470e+02  86.5%
+ 2: warmup transfers: 3.6742e-03   2.8%  1.6800e+02  14.9%  8.000e+01   5.1%  2.400e+01        0.1%  0.000e+00   0.0%
+ 3: 3ds g-to-s scat: 2.1592e-04   0.2%  8.4000e+02  74.5%  2.800e+02  17.7%  2.400e+01        0.3%  0.000e+00   0.0%
+ 4:   3ds pde-solve: 2.1670e-03   1.6%  1.2000e+02  10.6%  0.000e+00   0.0%  0.000e+00        0.0%  0.000e+00   0.0%
+ 5: 3ds s-to-l scat: 1.3715e-04   0.1%  0.0000e+00   0.0%  1.200e+02   7.6%  2.400e+01        0.1%  0.000e+00   0.0%
 
 ------------------------------------------------------------------------------------------------------------------------
 See the 'Profiling' chapter of the users' manual for details on interpreting output.
@@ -411,6 +426,20 @@ Phase summary info:
    GpuToCpu Size (Mbytes): 10e-6 * (total size of GPU to CPU copies per processor)
    GPU %F: percent flops on GPU in this event
 ------------------------------------------------------------------------------------------------------------------------
+
+
+      ##########################################################
+      #                                                        #
+      #                       WARNING!!!                       #
+      #                                                        #
+      #   This code was compiled with a debugging option.      #
+      #   To get timing results run ./configure                #
+      #   using --with-debugging=no, the performance will      #
+      #   be generally two or three times faster.              #
+      #                                                        #
+      ##########################################################
+
+
 Event                Count      Time (sec)     Flop                              --- Global ---  --- Stage ----  Total   GPU    - CpuToGpu -   - GpuToCpu - GPU
                    Max Ratio  Max     Ratio   Max  Ratio  Mess   AvgLen  Reduct  %T %F %M %L %R  %T %F %M %L %R Mflop/s Mflop/s Count   Size   Count   Size  %F
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -420,39 +449,39 @@ Event                Count      Time (sec)     Flop                             
 
 --- Event Stage 1: 3ds-background
 
-PetscBarrier           3 1.0 1.0250e-04 4.3 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   0  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-BuildTwoSided          3 1.0 1.7820e-04 3.6 0.00e+00 0.0 8.0e+01 4.0e+00 3.0e+00  0  0  5  0  5   0  0  7  0  8     0       0      0 0.00e+00    0 0.00e+00  0
-VecView               12 1.0 6.4593e-02 1.0 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00 86  0  0  0  0  87  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-VecSet                 4 1.0 2.5500e-05 1.3 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   0  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-SFSetGraph             3 1.0 1.4000e-06 1.8 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   0  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-SFSetUp                3 1.0 2.3720e-04 2.4 0.00e+00 0.0 1.6e+02 8.0e+00 3.0e+00  0  0 10  0  5   0  0 14  0  8     0       0      0 0.00e+00    0 0.00e+00  0
+PetscBarrier           3 1.0 6.0070e-0420.2 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   0  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+BuildTwoSided          3 1.0 1.3590e-04 1.1 0.00e+00 0.0 8.0e+01 4.0e+00 6.0e+00  0  0  5  0  4   0  0  7  0  4     0       0      0 0.00e+00    0 0.00e+00  0
+VecView               12 1.0 6.4751e-02 1.0 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00 48  0  0  0  0  51  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+VecSet                 2 1.0 5.0900e-05 2.1 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   0  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+SFSetGraph             3 1.0 3.8000e-06 1.5 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   0  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+SFSetUp                3 1.0 3.6020e-04 1.1 0.00e+00 0.0 1.6e+02 8.0e+00 6.0e+00  0  0 10  0  4   0  0 14  0  4     0       0      0 0.00e+00    0 0.00e+00  0
 
 --- Event Stage 2: warmup transfers
 
-VecScatterBegin        3 1.0 4.3100e-05 1.2 0.00e+00 0.0 8.0e+01 2.4e+01 0.0e+00  0  0  5  0  0  34  0100100  0     0       0      0 0.00e+00    0 0.00e+00  0
-VecScatterEnd          3 1.0 2.2400e-05 1.4 2.10e+01 1.0 0.0e+00 0.0e+00 0.0e+00  0 15  0  0  0  16100  0  0  0     7       0      0 0.00e+00    0 0.00e+00  0
-VecSetRandom           2 1.0 2.1000e-05 1.3 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0  16  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-SFPack                 3 1.0 7.3000e-06 3.0 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   4  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-SFUnpack               3 1.0 3.5000e-06 1.3 2.10e+01 1.0 0.0e+00 0.0e+00 0.0e+00  0 15  0  0  0   3100  0  0  0    48       0      0 0.00e+00    0 0.00e+00  0
+VecScatterBegin        3 1.0 1.7174e-03 1.0 0.00e+00 0.0 8.0e+01 2.4e+01 0.0e+00  1  0  5  0  0  46  0100100  0     0       0      0 0.00e+00    0 0.00e+00  0
+VecScatterEnd          3 1.0 3.4300e-05 1.6 2.10e+01 1.0 0.0e+00 0.0e+00 0.0e+00  0 15  0  0  0   1100  0  0  0     5       0      0 0.00e+00    0 0.00e+00  0
+VecSetRandom           2 1.0 7.4600e-05 2.6 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   1  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+SFPack                 3 1.0 8.0840e-04192.5 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   5  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+SFUnpack               3 1.0 4.7000e-06 1.6 2.10e+01 1.0 0.0e+00 0.0e+00 0.0e+00  0 15  0  0  0   0100  0  0  0    36       0      0 0.00e+00    0 0.00e+00  0
 
 --- Event Stage 3: 3ds g-to-s scat
 
-VecScatterBegin       10 1.0 3.3600e-05 1.4 0.00e+00 0.0 2.8e+02 2.4e+01 0.0e+00  0  0 18  0  0  32  0100100  0     0       0      0 0.00e+00    0 0.00e+00  0
-VecScatterEnd         10 1.0 7.6600e-05 2.6 1.05e+02 1.0 0.0e+00 0.0e+00 0.0e+00  0 74  0  0  0  62100  0  0  0    11       0      0 0.00e+00    0 0.00e+00  0
-SFPack                10 1.0 3.9000e-06 2.8 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   3  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-SFUnpack              10 1.0 3.6000e-06 2.0 1.05e+02 1.0 0.0e+00 0.0e+00 0.0e+00  0 74  0  0  0   3100  0  0  0   233       0      0 0.00e+00    0 0.00e+00  0
+VecScatterBegin       10 1.0 7.8500e-05 1.4 0.00e+00 0.0 2.8e+02 2.4e+01 0.0e+00  0  0 18  0  0  31  0100100  0     0       0      0 0.00e+00    0 0.00e+00  0
+VecScatterEnd         10 1.0 1.5470e-04 1.5 1.05e+02 1.0 0.0e+00 0.0e+00 0.0e+00  0 74  0  0  0  61100  0  0  0     5       0      0 0.00e+00    0 0.00e+00  0
+SFPack                10 1.0 1.4000e-05 2.3 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   4  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+SFUnpack              10 1.0 8.2000e-06 1.4 1.05e+02 1.0 0.0e+00 0.0e+00 0.0e+00  0 74  0  0  0   3100  0  0  0   102       0      0 0.00e+00    0 0.00e+00  0
 
 --- Event Stage 4: 3ds pde-solve
 
-VecScale               5 1.0 1.0730e-04 2.2 1.50e+01 1.0 0.0e+00 0.0e+00 0.0e+00  0 11  0  0  0  83100  0  0  0     1       1      0 0.00e+00    0 0.00e+00 100
-VecCopy                5 1.0 1.2600e-05 1.7 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0  12  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+VecScale               5 1.0 2.1621e-03 1.0 1.50e+01 1.0 0.0e+00 0.0e+00 0.0e+00  2 11  0  0  0  98100  0  0  0     0       0      0 0.00e+00    0 0.00e+00 100
+VecCopy                5 1.0 2.0900e-05 1.2 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   1  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
 
 --- Event Stage 5: 3ds s-to-l scat
 
-VecScatterBegin        5 1.0 1.4700e-05 2.2 0.00e+00 0.0 1.2e+02 2.4e+01 0.0e+00  0  0  8  0  0  16  0100100  0     0       0      0 0.00e+00    0 0.00e+00  0
-VecScatterEnd          5 1.0 8.7900e-05 5.7 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0  81  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-SFPack                 5 1.0 2.5000e-06 2.1 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   3  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
-SFUnpack               5 1.0 2.2000e-06 3.7 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   2  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+VecScatterBegin        5 1.0 9.0600e-05 2.9 0.00e+00 0.0 1.2e+02 2.4e+01 0.0e+00  0  0  8  0  0  32  0100100  0     0       0      0 0.00e+00    0 0.00e+00  0
+VecScatterEnd          5 1.0 1.1800e-04 3.5 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0  60  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+SFPack                 5 1.0 6.7000e-06 1.5 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   4  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
+SFUnpack               5 1.0 4.6000e-06 2.4 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   2  0  0  0  0     0       0      0 0.00e+00    0 0.00e+00  0
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Memory usage is given in bytes:
@@ -462,18 +491,18 @@ Reports information only for process 0.
 
 --- Event Stage 0: Main Stage
 
-              Viewer     1              2         1680     0.
+              Viewer     1              2         1696     0.
 
 --- Event Stage 1: 3ds-background
 
               Viewer     4              0            0     0.
-              Vector    12             12        21584     0.
-           Index Set     4              4         3552     0.
-   Star Forest Graph     3              3         3600     0.
+              Vector    12             12        21680     0.
+           Index Set     4              4         3584     0.
+   Star Forest Graph     3              3         3624     0.
 
 --- Event Stage 2: warmup transfers
 
-         PetscRandom     2              2         1324     0.
+         PetscRandom     2              2         1340     0.
 
 --- Event Stage 3: 3ds g-to-s scat
 
@@ -484,9 +513,9 @@ Reports information only for process 0.
 --- Event Stage 5: 3ds s-to-l scat
 
 ========================================================================================================================
-Average time to get PetscTime(): 7e-08
-Average time for MPI_Barrier(): 4.82e-06
-Average time for zero size MPI_Send(): 1.675e-06
+Average time to get PetscTime(): 1.4e-07
+Average time for MPI_Barrier(): 1.056e-05
+Average time for zero size MPI_Send(): 2.8875e-06
 #PETSc Option Table entries:
 -debug
 -log_view
@@ -496,23 +525,37 @@ Average time for zero size MPI_Send(): 1.675e-06
 Compiled without FORTRAN kernels
 Compiled with full precision matrices (default)
 sizeof(short) 2 sizeof(int) 4 sizeof(long) 8 sizeof(void*) 8 sizeof(PetscScalar) 8 sizeof(PetscInt) 4
-Configure options: --prefix=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-bj26xcthkqpv3sunav3nt6zyui32n7fg --with-ssl=0 --download-c2html=0 --download-sowing=0 --download-hwloc=0 CFLAGS="-O2 -march=znver2 -mtune=znver2" FFLAGS="-O2 -march=znver2 -mtune=znver2" CXXFLAGS="-O2 -march=znver2 -mtune=znver2 -stdlib=libc++" --with-cc=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/bin/mpicc --with-cxx=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/bin/mpic++ --with-fc=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/bin/mpif90 --with-precision=double --with-scalar-type=real --with-shared-libraries=1 --with-debugging=0 --with-openmp=0 --with-64-bit-indices=0 COPTFLAGS= FOPTFLAGS= CXXOPTFLAGS= --with-blaslapack-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/openblas-0.3.19-y57mcwqmkypntdviqqny2bknjcq5u3hl/lib/libopenblas.so --with-x=0 --with-clanguage=C --with-cuda=0 --with-hip=0 --with-metis=1 --with-metis-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/include --with-metis-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/lib/libmetis.so --with-hypre=1 --with-hypre-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-owtwk2uvs6zbqav22nmfd4noudt7d5gc/include --with-hypre-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-owtwk2uvs6zbqav22nmfd4noudt7d5gc/lib/libHYPRE.so --with-parmetis=1 --with-parmetis-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-dnvszoo25mxpsrr53augnyionod7yao4/include --with-parmetis-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-dnvszoo25mxpsrr53augnyionod7yao4/lib/libparmetis.so --with-kokkos=1 --with-kokkos-dir=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo --with-kokkos-kernels=1 --with-kokkos-kernels-dir=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp --with-superlu_dist=1 --with-superlu_dist-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-tz7npedv7samvctjp4hliwnnhrwjqxj5/include --with-superlu_dist-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-tz7npedv7samvctjp4hliwnnhrwjqxj5/lib/libsuperlu_dist.so --with-ptscotch=1 --with-ptscotch-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/include --with-ptscotch-lib="/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/lib/libptesmumps.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/lib/libptscotch.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/lib/libptscotcherr.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/lib/libscotch.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/lib/libscotcherr.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib/libz.so" --with-suitesparse=0 --with-hdf5=1 --with-hdf5-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-glq5ad2eygthkeqgmypxbcjoxacwcf2p/include --with-hdf5-lib="/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-glq5ad2eygthkeqgmypxbcjoxacwcf2p/lib/libhdf5_hl.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-glq5ad2eygthkeqgmypxbcjoxacwcf2p/lib/libhdf5.so" --with-zlib=1 --with-zlib-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/include --with-zlib-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib/libz.so --with-mumps=0 --with-trilinos=0 --with-fftw=0 --with-valgrind=0 --with-gmp=0 --with-libpng=0 --with-giflib=0 --with-mpfr=0 --with-netcdf=0 --with-pnetcdf=0 --with-moab=0 --with-random123=0 --with-exodusii=0 --with-cgns=0 --with-memkind=0 --with-p4est=0 --with-saws=0 --with-yaml=0 --with-hwloc=0 --with-libjpeg=0 --with-scalapack=1 --with-scalapack-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/netlib-scalapack-2.1.0-wgozicevnevdskfb6rlavkav2qcfpzzc/lib/libscalapack.so --with-strumpack=1 --with-strumpack-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-hc7d6ejeaak55alomwdalnfw2owvnm3m/include --with-strumpack-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-hc7d6ejeaak55alomwdalnfw2owvnm3m/lib/libstrumpack.so --with-mmg=0 --with-parmmg=0 --with-tetgen=0
+Configure options: --prefix=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-ruy5o436zljenpknjcyxjzveltpxm4mb --with-ssl=0 --download-c2html=0 --download-sowing=0 --download-hwloc=0 CFLAGS="-O2 -march=znver2 -mtune=znver2" FFLAGS="-O2 -march=znver2 -mtune=znver2" CXXFLAGS="-O2 -march=znver2 -mtune=znver2 -stdlib=libc++" --with-cc=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/bin/mpicc --with-cxx=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/bin/mpic++ --with-fc=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/bin/mpif90 --with-precision=double --with-scalar-type=real --with-shared-libraries=1 --with-debugging=1 --with-openmp=0 --with-64-bit-indices=0 --with-blaslapack-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/openblas-0.3.19-y57mcwqmkypntdviqqny2bknjcq5u3hl/lib/libopenblas.so --with-x=0 --with-clanguage=C --with-cuda=0 --with-hip=0 --with-metis=1 --with-metis-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/include --with-metis-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/lib/libmetis.so --with-hypre=1 --with-hypre-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-gamwsxayzfxlhyk6sru24sfsdynixyar/include --with-hypre-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-gamwsxayzfxlhyk6sru24sfsdynixyar/lib/libHYPRE.so --with-parmetis=1 --with-parmetis-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-i6mpiogpv3pldxhofipjknx5qfzj7hwt/include --with-parmetis-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-i6mpiogpv3pldxhofipjknx5qfzj7hwt/lib/libparmetis.so --with-kokkos=1 --with-kokkos-dir=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo --with-kokkos-kernels=1 --with-kokkos-kernels-dir=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp --with-superlu_dist=1 --with-superlu_dist-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-au2apyaf4frth5dtl4cmiovryo5kjbdp/include --with-superlu_dist-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-au2apyaf4frth5dtl4cmiovryo5kjbdp/lib/libsuperlu_dist.so --with-ptscotch=1 --with-ptscotch-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/include --with-ptscotch-lib="/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/lib/libptesmumps.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/lib/libptscotch.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/lib/libptscotcherr.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/lib/libscotch.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/lib/libscotcherr.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib/libz.so" --with-suitesparse=0 --with-hdf5=1 --with-hdf5-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-y6rl7guxjqrwqgfd2scf4odg52izcgyw/include --with-hdf5-lib="/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-y6rl7guxjqrwqgfd2scf4odg52izcgyw/lib/libhdf5_hl.so /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-y6rl7guxjqrwqgfd2scf4odg52izcgyw/lib/libhdf5.so" --with-zlib=1 --with-zlib-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/include --with-zlib-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib/libz.so --with-mumps=0 --with-trilinos=0 --with-fftw=0 --with-valgrind=0 --with-gmp=0 --with-libpng=0 --with-giflib=0 --with-mpfr=0 --with-netcdf=0 --with-pnetcdf=0 --with-moab=0 --with-random123=0 --with-exodusii=0 --with-cgns=0 --with-memkind=0 --with-p4est=0 --with-saws=0 --with-yaml=0 --with-hwloc=0 --with-libjpeg=0 --with-scalapack=1 --with-scalapack-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/netlib-scalapack-2.1.0-kadjsldetczslyezg5yhtjgingh7uggy/lib/libscalapack.so --with-strumpack=1 --with-strumpack-include=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-ybxocbsdy4y2w6kxw3sd37s2mfjxclzd/include --with-strumpack-lib=/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-ybxocbsdy4y2w6kxw3sd37s2mfjxclzd/lib/libstrumpack.so --with-mmg=0 --with-parmmg=0 --with-tetgen=0
 -----------------------------------------
-Libraries compiled on 2022-02-09 19:25:43 on LAPTOP-CDJT2P3R 
+Libraries compiled on 2022-02-23 00:21:16 on LAPTOP-CDJT2P3R 
 Machine characteristics: Linux-4.19.128-microsoft-standard-x86_64-with-glibc2.31
-Using PETSc directory: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-bj26xcthkqpv3sunav3nt6zyui32n7fg
+Using PETSc directory: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-ruy5o436zljenpknjcyxjzveltpxm4mb
 Using PETSc arch: 
 -----------------------------------------
 
-Using C compiler: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/bin/mpicc -O2 -march=znver2 -mtune=znver2 -fPIC   
-Using Fortran compiler: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/bin/mpif90 -O2 -march=znver2 -mtune=znver2 -fPIC     
+Using C compiler: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/bin/mpicc -O2 -march=znver2 -mtune=znver2 -fPIC   
+Using Fortran compiler: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/bin/mpif90 -O2 -march=znver2 -mtune=znver2 -fPIC     
 -----------------------------------------
 
-Using include paths: -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-bj26xcthkqpv3sunav3nt6zyui32n7fg/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-owtwk2uvs6zbqav22nmfd4noudt7d5gc/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-hc7d6ejeaak55alomwdalnfw2owvnm3m/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-tz7npedv7samvctjp4hliwnnhrwjqxj5/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-glq5ad2eygthkeqgmypxbcjoxacwcf2p/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-dnvszoo25mxpsrr53augnyionod7yao4/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/include
+Using include paths: -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-ruy5o436zljenpknjcyxjzveltpxm4mb/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-gamwsxayzfxlhyk6sru24sfsdynixyar/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-ybxocbsdy4y2w6kxw3sd37s2mfjxclzd/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-au2apyaf4frth5dtl4cmiovryo5kjbdp/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-y6rl7guxjqrwqgfd2scf4odg52izcgyw/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-i6mpiogpv3pldxhofipjknx5qfzj7hwt/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/include -I/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/include
 -----------------------------------------
 
-Using C linker: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/bin/mpicc
-Using Fortran linker: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/bin/mpif90
-Using libraries: -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-bj26xcthkqpv3sunav3nt6zyui32n7fg/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-bj26xcthkqpv3sunav3nt6zyui32n7fg/lib -lpetsc -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-owtwk2uvs6zbqav22nmfd4noudt7d5gc/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-owtwk2uvs6zbqav22nmfd4noudt7d5gc/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-hc7d6ejeaak55alomwdalnfw2owvnm3m/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-hc7d6ejeaak55alomwdalnfw2owvnm3m/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/netlib-scalapack-2.1.0-wgozicevnevdskfb6rlavkav2qcfpzzc/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/netlib-scalapack-2.1.0-wgozicevnevdskfb6rlavkav2qcfpzzc/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-tz7npedv7samvctjp4hliwnnhrwjqxj5/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-tz7npedv7samvctjp4hliwnnhrwjqxj5/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/openblas-0.3.19-y57mcwqmkypntdviqqny2bknjcq5u3hl/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/openblas-0.3.19-y57mcwqmkypntdviqqny2bknjcq5u3hl/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-seaop7g3du27zx5arqinbuutyrr22lsg/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-glq5ad2eygthkeqgmypxbcjoxacwcf2p/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-glq5ad2eygthkeqgmypxbcjoxacwcf2p/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-dnvszoo25mxpsrr53augnyionod7yao4/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-dnvszoo25mxpsrr53augnyionod7yao4/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hwloc-2.7.0-cobsqzticue7y6xswgrcnhczkohbt5le/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hwloc-2.7.0-cobsqzticue7y6xswgrcnhczkohbt5le/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-3.4.2-ictzneqdiu6tthqgbaerxzvwvdkgs2tm/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib64 -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib64 -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-11.2.0/llvm-13.0.0-igzxdbdikhixp3czhzxq3b4zo6rycypk/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-11.2.0/llvm-13.0.0-igzxdbdikhixp3czhzxq3b4zo6rycypk/lib -lHYPRE -lstrumpack -lscalapack -lsuperlu_dist -lkokkoskernels -lkokkoscontainers -lkokkoscore -lopenblas -lptesmumps -lptscotch -lptscotcherr -lscotch -lscotcherr -lz -lpthread -lhdf5_hl -lhdf5 -lparmetis -lmetis -lm -lz -ldl -lmpifort -lmpi -lgfortran -lm -lgfortran -lm -lgcc_s -lquadmath -ldl -lmpicxx -lmpi -lc++ -lm -lgcc_s -ldl
+Using C linker: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/bin/mpicc
+Using Fortran linker: /home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/bin/mpif90
+Using libraries: -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-ruy5o436zljenpknjcyxjzveltpxm4mb/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/petsc-main-ruy5o436zljenpknjcyxjzveltpxm4mb/lib -lpetsc -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-gamwsxayzfxlhyk6sru24sfsdynixyar/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hypre-develop-gamwsxayzfxlhyk6sru24sfsdynixyar/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-ybxocbsdy4y2w6kxw3sd37s2mfjxclzd/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/strumpack-6.3.0-ybxocbsdy4y2w6kxw3sd37s2mfjxclzd/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/netlib-scalapack-2.1.0-kadjsldetczslyezg5yhtjgingh7uggy/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/netlib-scalapack-2.1.0-kadjsldetczslyezg5yhtjgingh7uggy/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-au2apyaf4frth5dtl4cmiovryo5kjbdp/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/superlu-dist-develop-au2apyaf4frth5dtl4cmiovryo5kjbdp/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-kernels-3.5.00-ilzmu6zmvicgldct4yb4cfqt26mqxxsp/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/kokkos-3.5.00-mwffrxascvhceg4bprn3nyez4xn3vtqo/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/openblas-0.3.19-y57mcwqmkypntdviqqny2bknjcq5u3hl/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/openblas-0.3.19-y57mcwqmkypntdviqqny2bknjcq5u3hl/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/scotch-6.1.1-aako5usdkxk657zns7igzqhjs52czvzu/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/zlib-1.2.11-hwlylittu23vvaixdrtuld7qt3a2h4uj/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-y6rl7guxjqrwqgfd2scf4odg52izcgyw/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/hdf5-1.12.1-y6rl7guxjqrwqgfd2scf4odg52izcgyw/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-i6mpiogpv3pldxhofipjknx5qfzj7hwt/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/parmetis-4.0.3-i6mpiogpv3pldxhofipjknx5qfzj7hwt/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/metis-5.1.0-bcj7iptdg36qwsxfvcxuv4gzm4rcdz6d/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/clang-13.0.0/mpich-develop-a6rh67373auinzea3pkzmzkba2se5no2/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib64 -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib64 -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/gcc-11.2.0-36ugcqpr5laqaukcht5ldyi6eh4e4ddu/lib -Wl,-rpath,/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-11.2.0/llvm-13.0.0-igzxdbdikhixp3czhzxq3b4zo6rycypk/lib -L/home/sajid/packages/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-11.2.0/llvm-13.0.0-igzxdbdikhixp3czhzxq3b4zo6rycypk/lib -lHYPRE -lstrumpack -lscalapack -lsuperlu_dist -lkokkoskernels -lkokkoscontainers -lkokkoscore -lopenblas -lptesmumps -lptscotch -lptscotcherr -lscotch -lscotcherr -lz -lpthread -lhdf5_hl -lhdf5 -lparmetis -lmetis -lm -lz -ldl -lmpifort -lmpi -lgfortran -lm -lgfortran -lm -lgcc_s -lquadmath -ldl -lmpicxx -lmpi -lc++ -lm -lgcc_s -ldl
 -----------------------------------------
+
+
+
+      ##########################################################
+      #                                                        #
+      #                       WARNING!!!                       #
+      #                                                        #
+      #   This code was compiled with a debugging option.      #
+      #   To get timing results run ./configure                #
+      #   using --with-debugging=no, the performance will      #
+      #   be generally two or three times faster.              #
+      #                                                        #
+      ##########################################################
+
 

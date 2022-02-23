@@ -47,10 +47,10 @@ PetscErrorCode determine_veccreatewitharray_func(GlobalCtx& gctx) {
   */
 PetscErrorCode init_global_local_aliases(LocalCtx& lctx, GlobalCtx& gctx){
 
-  PetscInt           phi_localsize;
-  PetscInt           rho_localsize;
-  PetscScalar const  *phi_val;
-  PetscScalar const  *rho_val;
+  PetscInt           phi_localsize;   /* size of vector on this MPI rank */
+  PetscInt           rho_localsize;   /* size of vector on this MPI rank */
+  PetscScalar const  *d_phi_val;      /* read-only pointer to vector's contents on device */
+  PetscScalar const  *d_rho_val;      /* read-only pointer to vector's contents on device */
   PetscMemType       mtype_phi;
   PetscMemType       mtype_rho;
   PetscErrorCode     ierr;
@@ -62,8 +62,8 @@ PetscErrorCode init_global_local_aliases(LocalCtx& lctx, GlobalCtx& gctx){
   ierr = VecGetLocalSize(lctx.seqrho, &rho_localsize);CHKERRQ(ierr);
 
   /* Get access to local vector */
-  ierr = VecGetArrayReadAndMemType(lctx.seqphi, &phi_val, &mtype_phi);CHKERRQ(ierr);
-  ierr = VecGetArrayReadAndMemType(lctx.seqrho, &rho_val, &mtype_rho);CHKERRQ(ierr);
+  ierr = VecGetArrayReadAndMemType(lctx.seqphi, &d_phi_val, &mtype_phi);CHKERRQ(ierr);
+  ierr = VecGetArrayReadAndMemType(lctx.seqrho, &d_rho_val, &mtype_rho);CHKERRQ(ierr);
 
   /* consistency check */
   if (gctx.debug) {
@@ -79,21 +79,21 @@ PetscErrorCode init_global_local_aliases(LocalCtx& lctx, GlobalCtx& gctx){
       1,
       phi_localsize,
       PETSC_DECIDE,
-      phi_val,
+      d_phi_val,
       &gctx.phi_global_local);CHKERRQ(ierr);
   ierr = gctx.VecCreate_type_WithArray(PETSC_COMM_WORLD,
       1,
       rho_localsize,
       PETSC_DECIDE,
-      rho_val,
+      d_rho_val,
       &gctx.rho_global_local);CHKERRQ(ierr);
 
   ierr = PetscObjectSetName((PetscObject)(gctx.phi_global_local), "phi_global_local_on_gctx");CHKERRQ(ierr);
   ierr = PetscObjectSetName((PetscObject)(gctx.rho_global_local), "rho_global_local_on_gctx");CHKERRQ(ierr);
 
   /* Restore local vector arrays */
-  ierr = VecRestoreArrayReadAndMemType(lctx.seqphi, &phi_val);CHKERRQ(ierr);
-  ierr = VecRestoreArrayReadAndMemType(lctx.seqrho, &rho_val);CHKERRQ(ierr);
+  ierr = VecRestoreArrayReadAndMemType(lctx.seqphi, &d_phi_val);CHKERRQ(ierr);
+  ierr = VecRestoreArrayReadAndMemType(lctx.seqrho, &d_rho_val);CHKERRQ(ierr);
 
   PetscFunctionReturn(ierr);
 }
@@ -107,10 +107,10 @@ PetscErrorCode init_global_local_aliases(LocalCtx& lctx, GlobalCtx& gctx){
   */
 PetscErrorCode init_global_subcomm_aliases(SubcommCtx& sctx, GlobalCtx& gctx){
 
-  PetscInt           phi_localsize;
-  PetscInt           rho_localsize;
-  PetscScalar const  *phi_val;
-  PetscScalar const  *rho_val;
+  PetscInt           phi_localsize;   /* size of vector on this MPI rank */
+  PetscInt           rho_localsize;   /* size of vector on this MPI rank */
+  PetscScalar const  *d_phi_val;      /* read-only pointer to vector's contents on device */
+  PetscScalar const  *d_rho_val;      /* read-only pointer to vector's contents on device */
   PetscMemType       mtype_phi;
   PetscMemType       mtype_rho;
   PetscInt           size;
@@ -123,8 +123,8 @@ PetscErrorCode init_global_subcomm_aliases(SubcommCtx& sctx, GlobalCtx& gctx){
   ierr = VecGetLocalSize(sctx.rho_subcomm, &rho_localsize);CHKERRQ(ierr);
 
   /* Get access to local vector */
-  ierr = VecGetArrayReadAndMemType(sctx.phi_subcomm, &phi_val, &mtype_phi);CHKERRQ(ierr);
-  ierr = VecGetArrayReadAndMemType(sctx.rho_subcomm, &rho_val, &mtype_rho);CHKERRQ(ierr);
+  ierr = VecGetArrayReadAndMemType(sctx.phi_subcomm, &d_phi_val, &mtype_phi);CHKERRQ(ierr);
+  ierr = VecGetArrayReadAndMemType(sctx.rho_subcomm, &d_rho_val, &mtype_rho);CHKERRQ(ierr);
 
   /* resize to ensure we only create as many aliases
      as the number of subcomms ! */
@@ -156,13 +156,13 @@ PetscErrorCode init_global_subcomm_aliases(SubcommCtx& sctx, GlobalCtx& gctx){
           1,
           phi_localsize,
           PETSC_DECIDE,
-          phi_val,
+          d_phi_val,
           &(gctx.phi_global_subcomm[i]));CHKERRQ(ierr);
       ierr = gctx.VecCreate_type_WithArray(PETSC_COMM_WORLD,
           1,
           rho_localsize,
           PETSC_DECIDE,
-          rho_val,
+          d_rho_val,
           &(gctx.rho_global_subcomm[i]));CHKERRQ(ierr);
 
     } else {
@@ -194,8 +194,8 @@ PetscErrorCode init_global_subcomm_aliases(SubcommCtx& sctx, GlobalCtx& gctx){
   ierr = PetscBarrier(NULL);CHKERRQ(ierr);
 
   /* Restore local vector arrays */
-  ierr = VecRestoreArrayReadAndMemType(sctx.phi_subcomm, &phi_val);CHKERRQ(ierr);
-  ierr = VecRestoreArrayReadAndMemType(sctx.rho_subcomm, &rho_val);CHKERRQ(ierr);
+  ierr = VecRestoreArrayReadAndMemType(sctx.phi_subcomm, &d_phi_val);CHKERRQ(ierr);
+  ierr = VecRestoreArrayReadAndMemType(sctx.rho_subcomm, &d_rho_val);CHKERRQ(ierr);
 
   if (gctx.debug){
     for (PetscInt i=0; i<gctx.nsubcomms; i++){
@@ -222,13 +222,13 @@ PetscErrorCode init_global_subcomm_aliases(SubcommCtx& sctx, GlobalCtx& gctx){
   */
 PetscErrorCode init_subcomm_local_aliases(LocalCtx& lctx, SubcommCtx& sctx, GlobalCtx& gctx){
 
-  PetscInt          phi_localsize;
-  PetscInt          rho_localsize;
-  PetscScalar const *phi_val;
-  PetscScalar const *rho_val;
-  PetscMemType      mtype_phi;
-  PetscMemType      mtype_rho;
-  PetscErrorCode    ierr;
+  PetscInt           phi_localsize;   /* size of vector on this MPI rank */
+  PetscInt           rho_localsize;   /* size of vector on this MPI rank */
+  PetscScalar const  *d_phi_val;      /* read-only pointer to vector's contents on device */
+  PetscScalar const  *d_rho_val;      /* read-only pointer to vector's contents on device */
+  PetscMemType       mtype_phi;
+  PetscMemType       mtype_rho;
+  PetscErrorCode     ierr;
 
   PetscFunctionBeginUser;
 
@@ -237,8 +237,8 @@ PetscErrorCode init_subcomm_local_aliases(LocalCtx& lctx, SubcommCtx& sctx, Glob
   ierr = VecGetLocalSize(lctx.seqrho, &rho_localsize);CHKERRQ(ierr);
 
   /* Get access to local vector */
-  ierr = VecGetArrayReadAndMemType(lctx.seqphi, &phi_val, &mtype_phi);CHKERRQ(ierr);
-  ierr = VecGetArrayReadAndMemType(lctx.seqrho, &rho_val, &mtype_rho);CHKERRQ(ierr);
+  ierr = VecGetArrayReadAndMemType(lctx.seqphi, &d_phi_val, &mtype_phi);CHKERRQ(ierr);
+  ierr = VecGetArrayReadAndMemType(lctx.seqrho, &d_rho_val, &mtype_rho);CHKERRQ(ierr);
 
   /* consistency check */
   if (gctx.debug) {
@@ -255,20 +255,20 @@ PetscErrorCode init_subcomm_local_aliases(LocalCtx& lctx, SubcommCtx& sctx, Glob
       1,
       phi_localsize,
       PETSC_DECIDE,
-      phi_val,
+      d_phi_val,
       &sctx.phi_subcomm_local);CHKERRQ(ierr);
   ierr = gctx.VecCreate_type_WithArray(PetscObjectComm(PetscObject(sctx.phi_subcomm)),
       1,
       rho_localsize,
       PETSC_DECIDE,
-      rho_val,
+      d_rho_val,
       &sctx.rho_subcomm_local);CHKERRQ(ierr);
   ierr = PetscObjectSetName((PetscObject)(sctx.phi_subcomm_local), "phi_subcomm_local_on_sctx");CHKERRQ(ierr);
   ierr = PetscObjectSetName((PetscObject)(sctx.rho_subcomm_local), "rho_subcomm_local_on_sctx");CHKERRQ(ierr);
 
   /* Restore local vector arrays */
-  ierr = VecRestoreArrayReadAndMemType(lctx.seqphi, &phi_val);CHKERRQ(ierr);
-  ierr = VecRestoreArrayReadAndMemType(lctx.seqrho, &rho_val);CHKERRQ(ierr);
+  ierr = VecRestoreArrayReadAndMemType(lctx.seqphi, &d_phi_val);CHKERRQ(ierr);
+  ierr = VecRestoreArrayReadAndMemType(lctx.seqrho, &d_rho_val);CHKERRQ(ierr);
 
   PetscFunctionReturn(ierr);
 }
