@@ -103,7 +103,7 @@ int main(int argc,char **argv){
       nsize,
       MPIU_SCALAR,
       MPI_SUM,
-      PETSC_COMM_WORLD);CHKERRMPI(ierr);
+      subcomm);CHKERRMPI(ierr);
   ierr = VecRestoreArray(seqphi, &h_phi_val);CHKERRQ(ierr);
 
   /* Get access to local vector on device, makes vector reside on device */
